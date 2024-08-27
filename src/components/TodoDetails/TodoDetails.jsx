@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import { useState, useEffect, useContext } from 'react';
 import * as todoService from '../../services/todoService';
-import CommentForm from '../CommentForm/CommentForm';
+// import CommentForm from '../CommentForm/CommentForm';
 
 const TodoDetails = (props) => {
     const [todo, setTodo] = useState(null);
@@ -32,13 +32,12 @@ const TodoDetails = (props) => {
     return (
         <main>
             <header>
-                <p>{todo.category.toUpperCase()}</p>
-                <h1>{todo.title}</h1>
+                <h1>{todo.task}</h1>
                 <p>
-                    {todo.commentor.username} posted on
+                    {todo.creator.username} posted on
                     {new Date(todo.createdAt).toLocaleDateString()}
                 </p>
-                {todo.commentor._id === user._id && (
+                {todo.creator._id === user._id && (
                     <>
                         <Link to={`/todos/${todoId}/edit`}>Edit</Link>
 
@@ -46,7 +45,7 @@ const TodoDetails = (props) => {
                     </>
                 )}
             </header>
-            <p>{todo.text}</p>
+            <p>{todo.details}</p>
             <section>
                 <h2>Comments</h2>
                 <CommentForm handleAddComment={handleAddComment} />
@@ -55,11 +54,11 @@ const TodoDetails = (props) => {
                     <article key={comment._id}>
                         <header>
                             <p>
-                                {comment.commentor.username} posted on
+                                {comment.commentor} posted on
                                 {new Date(comment.createdAt).toLocaleDateString()}
                             </p>
                         </header>
-                        <p>{comment.text}</p>
+                        <p>{comment.details}</p>
                     </article>
                 ))}
             </section>
