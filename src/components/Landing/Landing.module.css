@@ -1,0 +1,35 @@
+.landing {
+    font-size: 40px;
+}
+
+.landing div {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.landing h1 {
+    font-size: 90px;
+}
+
+.landing ul {
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.landing li {
+    text-decoration: underline;
+}
+
+.landing a:hover {
+    opacity: 0.6;
+}
+
+.landing a:active {
+    opacity: 0.8;
+}

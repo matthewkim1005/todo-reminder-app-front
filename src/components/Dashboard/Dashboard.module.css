@@ -1,0 +1,35 @@
+.dashboard {
+    font-size: 40px;
+}
+
+.dashboard div {
+    text-align: center;
+    margin: auto;
+    width: 50%;
+    border: 3px solid black;
+    border-radius: 100px;
+    padding: 50px;
+}
+
+.dashboard h1 {
+    font-size: 90px;
+}
+
+.dashboard ul {
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+.dashboard li {
+    text-decoration: underline;
+}
+
+.dashboard a:hover {
+    opacity: 0.6;
+}
+
+.dashboard a:active {
+    opacity: 0.8;
+}
