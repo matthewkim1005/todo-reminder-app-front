@@ -9,14 +9,14 @@ const TodoList = (props) => {
                         <header>
                             <h2>{todo.task}</h2>
                             <p>
-                                {todo.commentor} posted on 
-                                {new Date(todo.createdAt).toLocaleDateString()}
+                                {todo.creator.username}
                             </p>
                         </header>
                         <p>{todo.details}</p>
                     </article>
                 </Link>
             ))}
+            <Link to="/todos/new">NEW TODO</Link>
         </main>
     );
 };

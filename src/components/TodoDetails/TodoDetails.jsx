@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import { useState, useEffect, useContext } from 'react';
 import * as todoService from '../../services/todoService';
-// import CommentForm from '../CommentForm/CommentForm';
+import CommentForm from '../CommentForm/CommentForm.jsx';
 
 const TodoDetails = (props) => {
     const [todo, setTodo] = useState(null);
@@ -33,10 +33,7 @@ const TodoDetails = (props) => {
         <main>
             <header>
                 <h1>{todo.task}</h1>
-                <p>
-                    {todo.creator.username} posted on
-                    {new Date(todo.createdAt).toLocaleDateString()}
-                </p>
+                <p>{todo.creator.username}'s Todo List Details</p>
                 {todo.creator._id === user._id && (
                     <>
                         <Link to={`/todos/${todoId}/edit`}>Edit</Link>
@@ -54,7 +51,7 @@ const TodoDetails = (props) => {
                     <article key={comment._id}>
                         <header>
                             <p>
-                                {comment.commentor} posted on
+                                {comment.commentor.username} posted on
                                 {new Date(comment.createdAt).toLocaleDateString()}
                             </p>
                         </header>
