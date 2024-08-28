@@ -34,6 +34,7 @@ const TodoDetails = (props) => {
             <header>
                 <h1>{todo.task}</h1>
                 <p>{todo.creator.username}'s Todo List Details</p>
+                <p>{todo.details}</p>
                 {todo.creator._id === user._id && (
                     <>
                         <Link to={`/todos/${todoId}/edit`}>Edit</Link>
@@ -42,11 +43,10 @@ const TodoDetails = (props) => {
                     </>
                 )}
             </header>
-            <p>{todo.details}</p>
             <section>
                 <h2>Comments</h2>
-                <CommentForm handleAddComment={handleAddComment} />
                 {!todo.comments.length && <p>There are no comments.</p>}
+                <CommentForm handleAddComment={handleAddComment} />
                 {todo.comments.map((comment) => (
                     <article key={comment._id}>
                         <header>
