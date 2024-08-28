@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
+
+.signin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.signin div {
+    text-align: center;
+    margin: 10px;
+}
+
+.signin form {
+    background-image: linear-gradient(white, rgba(109, 197, 226, 0.5));
+}
+
+.signin button {
+    margin: 10px;
+    padding: 10px;
+    font-family: "Nerko One", sans-serif;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.signin button:hover {
+    background-color: lightgray;
+}
