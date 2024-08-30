@@ -2,9 +2,12 @@ import { Link } from 'react-router-dom';
 import { AuthedUserContext } from '../../App';
 import { useContext } from 'react';
 import styles from './NavBar.module.css';
+import ReminderList from '../ReminderList/ReminderList';
+import ReminderForm from '../ReminderForm/ReminderForm';
 
 const NavBar = ({ handleSignout }) => {
   const user = useContext(AuthedUserContext);
+
   return (
     <>
       {user ? (
@@ -15,7 +18,7 @@ const NavBar = ({ handleSignout }) => {
             <li><Link to='' onClick={handleSignout}>SIGN OUT</Link></li>
           </ul>
           <ul className={styles.right}>
-            <li><Link to='/reminder'>REMINDERS</Link></li>
+            <li><Link to='/reminders'>REMINDERS</Link></li>
           </ul>
         </nav>
       ) : (

@@ -37,7 +37,7 @@ const TodoForm = (props) => {
                 <label htmlFor="task-input">Task</label>
                 <input
                     required
-                    type="details"
+                    type="task"
                     name="task"
                     id="task-input"
                     value={formData.task}

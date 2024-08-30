@@ -5,10 +5,17 @@ import Landing from './components/Landing/Landing';
 import Dashboard from './components/Dashboard/Dashboard';
 import SignupForm from './components/SignupForm/SignupForm';
 import SigninForm from './components/SigninForm/SigninForm';
+
 import TodoList from './components/TodoList/TodoList';
 import TodoDetails from './components/TodoDetails/TodoDetails';
 import TodoForm from './components/TodoForm/TodoForm';
+
+import ReminderList from './components/ReminderList/ReminderList';
+// import ReminderDetails from './components/ReminderDetails/ReminderDetails';
+import ReminderForm from './components/ReminderForm/ReminderForm';
+
 import * as todoService from './services/todoService';
+import * as reminderService from './services/reminderService';
 import * as authService from '../src/services/authService';
 
 export const AuthedUserContext = createContext(null);
@@ -16,6 +23,7 @@ export const AuthedUserContext = createContext(null);
 const App = () => {
   const [user, setUser] = useState(authService.getUser());
   const [todos, setTodos] = useState([]);
+  const [reminders, setReminders] = useState([]);
   const navigate = useNavigate();
 
   const handleSignout = () => {
@@ -41,6 +49,25 @@ const App = () => {
     navigate(`/todos/${todoId}`);
   };
 
+  //reminders
+  const handleAddReminder = async (reminderFormData) => {
+    const newReminder = await reminderService.create(reminderFormData);
+    setReminders([newReminder, ...reminders]);
+    navigate('/reminders');
+  };
+
+  const handleDeleteReminder = async (reminderId) => {
+    const deletedReminder = await reminderService.deleteReminder(reminderId);
+    setReminders(reminders.filter((reminder) => reminder._id !== deletedReminder._id));
+    navigate('/reminders');
+  };
+
+  const handleUpdateReminder = async (reminderId, reminderFormData) => {
+    const updatedReminder = await reminderService.update(reminderId, reminderFormData);
+    setReminders(reminders.map((reminder) => (reminderId === reminder._id ? updatedReminder : reminder)));
+    navigate(`/reminders/${reminderId}`);
+  };
+
   //reloads when the dependency changes [user]
   //if user changes, run the userEffect again
   useEffect(() => {
@@ -49,6 +76,14 @@ const App = () => {
       setTodos(todosData);
     };
     if (user) fetchAllTodos();
+  }, [user]);
+
+  useEffect(() => {
+    const fetchAllReminders = async () => {
+      const remindersData = await reminderService.index();
+      setReminders(remindersData);
+    };
+    if (user) fetchAllReminders();
   }, [user]);
 
   return (
@@ -64,6 +99,9 @@ const App = () => {
               <Route path="/todos/:todoId" element={<TodoDetails handleDeleteTodo={handleDeleteTodo} />} />
               <Route path="/todos/new" element={<TodoForm handleAddTodo={handleAddTodo} />} />
               <Route path="/todos/:todoId/edit" element={<TodoForm handleUpdateTodo={handleUpdateTodo} />} />
+
+              <Route path="/reminders" element={<ReminderList reminders={reminders} handleDeleteReminder={handleDeleteReminder} />} />
+              <Route path="/reminders/new" element={<ReminderForm handleAddReminder={handleAddReminder} />} />
             </>
           ) : (
             // Public Route:
