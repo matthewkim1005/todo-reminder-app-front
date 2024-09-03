@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as reminderService from '../../services/reminderService';
+import styles from './ReminderForm.module.css';
 
 const ReminderForm = (props) => {
     const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const ReminderForm = (props) => {
     }, [reminderId]);
 
     return (
-        <main>
+        <main className={styles.reminderform}>
             <form onSubmit={handleSubmit}>
                 <h1>{reminderId ? 'Edit Reminder' : 'New Reminder'}</h1>
                 <label htmlFor="event-input">Event</label>

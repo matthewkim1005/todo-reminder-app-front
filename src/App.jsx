@@ -53,19 +53,13 @@ const App = () => {
   const handleAddReminder = async (reminderFormData) => {
     const newReminder = await reminderService.create(reminderFormData);
     setReminders([newReminder, ...reminders]);
-    navigate('/reminders');
+    navigate('/');
   };
 
   const handleDeleteReminder = async (reminderId) => {
     const deletedReminder = await reminderService.deleteReminder(reminderId);
     setReminders(reminders.filter((reminder) => reminder._id !== deletedReminder._id));
-    navigate('/reminders');
-  };
-
-  const handleUpdateReminder = async (reminderId, reminderFormData) => {
-    const updatedReminder = await reminderService.update(reminderId, reminderFormData);
-    setReminders(reminders.map((reminder) => (reminderId === reminder._id ? updatedReminder : reminder)));
-    navigate(`/reminders/${reminderId}`);
+    navigate('/');
   };
 
   //reloads when the dependency changes [user]

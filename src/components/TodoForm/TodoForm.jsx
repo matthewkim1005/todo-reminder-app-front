@@ -1,6 +1,7 @@
 import { useParams } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import * as todoService from '../../services/todoService';
+import styles from './TodoForm.module.css';
 
 const TodoForm = (props) => {
     const [formData, setFormData] = useState({
@@ -31,7 +32,7 @@ const TodoForm = (props) => {
     }, [todoId]);
 
     return (
-        <main>
+        <main className={styles.todoform}>
             <form onSubmit={handleSubmit}>
                 <h1>{todoId ? 'Edit Todo' : 'New Todo'}</h1>
                 <label htmlFor="task-input">Task</label>

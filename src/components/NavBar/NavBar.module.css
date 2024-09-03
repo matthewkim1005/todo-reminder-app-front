@@ -8,12 +8,8 @@
   position: fixed;
   padding: 15px;
   align-items: center;
-  background: rgba(0, 166, 249, 0.3);
+  background-image: linear-gradient(white, rgba(109, 197, 226));
   border-bottom: 1px solid rgb(200, 200, 200);
-}
-
-.container img {
-  width: 50px;
 }
 
 .container ul {
@@ -29,20 +25,43 @@
   justify-content: flex-start;
 }
 
+.container li.left {
+  margin: 30px;
+}
+
 .container ul.right {
   justify-content: flex-end;
+  margin: 30px;
 }
 
 .container ul.center {
   justify-content: center;
   text-align: center;
-}
-
-.container li {
   margin: 30px;
 }
 
-.container li:hover {
+.container .reminderList {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0;
+  z-index: 1;
+}
+
+.container .dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.container .dropdown:hover .reminderList {
+  display: block;
+  max-height: 700px;
+  overflow:scroll; 
+}
+
+.container li.left:hover {
   opacity: 0.5;
 }
 
