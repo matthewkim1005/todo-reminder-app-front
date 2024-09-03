@@ -90,7 +90,7 @@ const App = () => {
             <>
               <Route path="/" element={<Dashboard user={user} />} />
               <Route path="/todos" element={<TodoList todos={todos} />} />
-              <Route path="/todos/:todoId" element={<TodoDetails handleDeleteTodo={handleDeleteTodo} />} />
+              <Route path="/todos/:todoId" element={<TodoDetails handleDeleteTodo={handleDeleteTodo} todos={todos} setTodos={setTodos} />} />
               <Route path="/todos/new" element={<TodoForm handleAddTodo={handleAddTodo} />} />
               <Route path="/todos/:todoId/edit" element={<TodoForm handleUpdateTodo={handleUpdateTodo} />} />
 

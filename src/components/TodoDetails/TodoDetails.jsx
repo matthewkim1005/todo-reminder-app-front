@@ -22,6 +22,11 @@ const TodoDetails = (props) => {
 
     const handleAddComment = async (commentFormData) => {
         const newComment = await todoService.createComment(todoId, commentFormData);
+        const updatedTodos = props.todos.map((todo) => (
+                todo._id === newComment._id ? newComment : todo
+            )
+        )
+        props.setTodos(updatedTodos)
         setTodo({ ...todo, comments: [...todo.comments, newComment] });
     };
 
@@ -51,11 +56,10 @@ const TodoDetails = (props) => {
                     <article key={comment._id}>
                         <header>
                             <p>
-                                {comment.commentor.username} posted on
-                                {new Date(comment.createdAt).toLocaleDateString()}
+                                {comment.commentor.username} posted on {new Date(comment.createdAt).toLocaleDateString()}
                             </p>
                         </header>
-                        <p>{comment.details}</p>
+                        <p>{comment.text}</p>
                     </article>
                 ))}
             </section>
