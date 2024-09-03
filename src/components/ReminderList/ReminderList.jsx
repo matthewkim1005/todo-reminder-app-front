@@ -16,7 +16,7 @@ const ReminderList = (props) => {
                                     <h2>{reminder.event}</h2>
                                 </header>
                                 {reminder.date ?
-                                    <p>{reminder.date}</p>
+                                    <p>{reminder.date.substring(0, 10)}</p>
                                     : ''}
                                 <p>{reminder.time}</p>
                                 <button onClick={() => props.handleDeleteReminder(reminder._id)}>Delete</button>

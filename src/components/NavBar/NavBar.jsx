@@ -37,7 +37,8 @@ const NavBar = ({ handleSignout }) => {
         <nav className={styles.container}>
           <ul className={styles.left}>
             <li className={styles.left}><Link to='/'>HOME</Link></li>
-            <li className={styles.left}><Link to='/todos'>TODOS</Link></li>
+            <li className={styles.left}><Link to='/todos'>MY TODOS</Link></li>
+            <li className={styles.left}><Link to='/todos'>ALL TODOS</Link></li>
             <li className={styles.left}><Link to='' onClick={handleSignout}>SIGN OUT</Link></li>
           </ul>
           <ul className={styles.right}>
