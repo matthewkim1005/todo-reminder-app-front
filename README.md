@@ -7,10 +7,13 @@
 ![CSS3](https://img.shields.io/badge/-CSS-2b244f?style=flat&logo=css3)
 ![React](https://img.shields.io/badge/-React-2b244f?style=flat&logo=react)
 
-## Future Goals
+## User Stories
 
-- [ ] Add comments for todos.
-- [ ] Add sounds and animations.
+1. As a user, I want to be able to create a todo list or a reminder list.
+2. As a user, I want to be able to edit my todo/reminder lists.
+3. As a user, I want to be able to edit my todo/reminder items.
+4. As a user, I want to be able to see a clear UI/UX of my lists and reminders.
+5. As a user, I want my reminders to be private and only I can have access to them.
 
 ## Sign in
 
@@ -54,4 +57,8 @@ Reminders are shown on the side of the screen on the navbar.
 
 <img src="public/screenshots/ReminderList.png" alt="ReminderList" title="ReminderList" width="300" height="600" />
 
+## Future Goals
+
+- [ ] Add comments for todos.
+- [ ] Add sounds and animations.
 </div>
