@@ -14,21 +14,30 @@
 
 ## Sign in
 
-![Sign in](public/screenshots/Signin.png)
+<img src="public/screenshots/Signin.png" alt="Signin" title="Signin" width="500" height="400" />
 
 ## Sign up
 
-<img src="public/screenshots/Signin.png" alt="Kitten" title="A cute kitten" width="500" height="400" />
+<img src="public/screenshots/Signup.png" alt="Signup" title="Signup" width="500" height="400" />
 
 ## Create Todo
 
+<img src="public/screenshots/Todo.png" alt="Todo" title="Todo" width="1000" height="400" />
+
 ## Todo List
+
+<img src="public/screenshots/List.png" alt="List" title="List" width="500" height="300" />
 
 ## Edit Todo
 
+<img src="public/screenshots/Edit.png" alt="Edit" title="Edit" width="500" height="300" />Edit
+
 ## Create Reminder
+
+<img src="public/screenshots/Reminder.png" alt="Reminder" title="Reminder" width="500" height="300" />
 
 ## Reminder List
 
+<img src="public/screenshots/ReminderList.png" alt="ReminderList" title="ReminderList" width="400" height="900" />
 
 </div>
