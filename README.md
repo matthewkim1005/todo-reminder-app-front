@@ -14,30 +14,44 @@
 
 ## Sign in
 
+Sign in using the 'Sign in' button on the navbar.
+
 <img src="public/screenshots/Signin.png" alt="Signin" title="Signin" width="500" height="400" />
 
 ## Sign up
+
+Signing up using the MongoDB datebase, unique username.
 
 <img src="public/screenshots/Signup.png" alt="Signup" title="Signup" width="500" height="400" />
 
 ## Create Todo
 
-<img src="public/screenshots/Todo.png" alt="Todo" title="Todo" width="1000" height="400" />
+Creates a todo that shows in the index of todos. You can edit and delete todos that were made by yourself.
+
+<img src="public/screenshots/Todo.png" alt="Todo" title="Todo" width="500" height="400" />
 
 ## Todo List
 
-<img src="public/screenshots/List.png" alt="List" title="List" width="500" height="300" />
+Indexes the todo list and you can see all the todos of users. You can also comment on them.
+
+<img src="public/screenshots/List.png" alt="List" title="List" width="1000" height="300" />
 
 ## Edit Todo
 
-<img src="public/screenshots/Edit.png" alt="Edit" title="Edit" width="500" height="300" />Edit
+Editing the todo will update the todo of your choice. You must own it.
+
+<img src="public/screenshots/Edit.png" alt="Edit" title="Edit" width="500" height="300" />
 
 ## Create Reminder
+
+Creates a reminder that you can access for yourself. You cannot access other people's reminders.
 
 <img src="public/screenshots/Reminder.png" alt="Reminder" title="Reminder" width="500" height="300" />
 
 ## Reminder List
 
-<img src="public/screenshots/ReminderList.png" alt="ReminderList" title="ReminderList" width="400" height="900" />
+Reminders are shown on the side of the screen on the navbar.
+
+<img src="public/screenshots/ReminderList.png" alt="ReminderList" title="ReminderList" width="300" height="600" />
 
 </div>
