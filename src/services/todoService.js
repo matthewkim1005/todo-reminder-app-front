@@ -11,6 +11,17 @@ const index = async () => {
     }
 };
 
+const myTodos = async () => {
+    try {
+        const res = await fetch(`${BASE_URL}/myTodos`, {
+            headers: { Authorization: `Bearer ${localStorage.getItem('token')}` },
+        });
+        return res.json();
+    } catch (error) {
+        console.log(error);
+    }
+};
+
 const show = async (todoId) => {
     try {
         const res = await fetch(`${BASE_URL}/${todoId}`, {
@@ -90,5 +101,6 @@ export {
     create,
     createComment,
     deleteTodo,
-    update
+    update,
+    myTodos
 };

@@ -1,6 +1,11 @@
 <div id="assets" align="center">
 
 <h1 font-size = 100px>Todo | Reminder Application</h1>
+By Matthew Kim
+
+This application allows you to make Todos and Reminders with certain details to help you organize your busy schedule.
+
+You are able to make your own personal reminders, or see what your friends are up to by looking at their todos lists.
 
 ## Technologies Used
 ![MongoDB](https://img.shields.io/badge/-MongoDB-2b244f?style=flat&logo=mongodb)
