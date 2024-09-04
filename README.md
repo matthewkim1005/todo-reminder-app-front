@@ -3,6 +3,10 @@
 <h1 font-size = 100px>Todo | Reminder Application</h1>
 <p>By Matthew Kim</p>
 
+## Link
+
+https://todo-reminder-application.netlify.app
+
 This application allows you to make Todos and Reminders with certain details to help you organize your busy schedule.
 
 You are able to make your own personal reminders, or see what your friends are up to by looking at their todos lists.

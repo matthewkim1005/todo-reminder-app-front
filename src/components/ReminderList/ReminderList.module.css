@@ -55,11 +55,11 @@
 
 .container article h2 {
     margin: 0;
-    font-size: 20px;
-    overflow: hidden;
+    font-size: 15px;
+    overflow: visible;
     display: -webkit-box;
     -webkit-line-clamp: 1;
-    text-overflow: ellipsis;
+    text-overflow: clip;
     -webkit-box-orient: vertical;
 }
 

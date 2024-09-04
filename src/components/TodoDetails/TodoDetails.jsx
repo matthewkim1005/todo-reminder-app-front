@@ -53,8 +53,8 @@ const TodoDetails = (props) => {
             </header>
             <section>
                 <h2>Comments</h2>
-                {!todo.comments.length && <p>There are no comments.</p>}
                 <CommentForm handleAddComment={handleAddComment} />
+                {!todo.comments.length && <p>There are no comments.</p>}
                 {todo.comments.map((comment) => (
                     <article className={styles.comment} key={comment._id}>
                         <header>

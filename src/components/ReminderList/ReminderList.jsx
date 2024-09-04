@@ -2,6 +2,14 @@ import { Link } from 'react-router-dom';
 import styles from './ReminderList.module.css';
 
 const ReminderList = (props) => {
+    // useEffect(() => {
+    //     const fetchAllReminders = async () => {
+    //       const remindersData = await reminderService.index();
+    //       setReminders(remindersData);
+    //     };
+    //     if (user) fetchAllReminders();
+    //   }, [user]);
+
     return (
         <main>
             <div className={styles.center}>
