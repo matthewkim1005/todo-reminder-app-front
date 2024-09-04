@@ -1,5 +1,7 @@
 <div id="assets" align="center">
 
+<h1 font-size = 100px>Todo | Reminder Application</h1>
+
 ## Technologies Used
 ![MongoDB](https://img.shields.io/badge/-MongoDB-2b244f?style=flat&logo=mongodb)
 ![JavaScript](https://img.shields.io/badge/javascript-9691b5?logo=javascript&logoColor=2b244f)
@@ -59,6 +61,8 @@ Reminders are shown on the side of the screen on the navbar.
 
 ## Future Goals
 
-- [ ] Add comments for todos.
+- [x] Add comments for todos.
 - [ ] Add sounds and animations.
+- [ ] Implement a drag and drop feature.
+- [ ] Add notifications for reminders.
 </div>
