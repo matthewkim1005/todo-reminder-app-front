@@ -18,7 +18,7 @@
 
 ## Sign up
 
-<img src="public/screenshots/Signin.png" alt="Kitten" title="A cute kitten" width="150" height="100" />
+<img src="public/screenshots/Signin.png" alt="Kitten" title="A cute kitten" width="500" height="400" />
 
 ## Create Todo
 
