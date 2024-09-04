@@ -1,7 +1,7 @@
 <div id="assets" align="center">
 
 <h1 font-size = 100px>Todo | Reminder Application</h1>
-By Matthew Kim
+<p>By Matthew Kim</p>
 
 This application allows you to make Todos and Reminders with certain details to help you organize your busy schedule.
 
